@@ -4,8 +4,17 @@ var weekly_quakes_endpoint = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/s
 $(document).ready(function() {
 // c onsole.log(“Let’s get coding!“);
  // CODE IN HERE!
-
+initMap();
 getQuake()
+//map HERE ?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 30.2682, lng: -97.74295},
+          zoom: 8
+        });
+      }
+
 });
 
 function getQuake() {
